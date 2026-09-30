@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cores em CSS</title>
+
+  <style>
+
+    #container{
+      width: 300px;
+      margin: auto;
+    }
+
+    #container div{
+      margin: 40px;
+      padding: 20px;
+    } 
+
+    #rgb{
+      background-color: rgb(255,0,255);
+    }
+    
+    #rgba{
+      background-color: rgba(255,0,255,40%);
+    }
+
+    #hsl{
+      background-color: hsl(0,50%,50%);
+    }
+    
+    #hsla{
+      background-color: hsla(0,50%,50%,25%);
+    }
+  </style>
+
+</head>
+<body style="background-color: darkgrey;">
+
+  <h1 style="text-align: center;">Cores em CSS</h1>
+
+  <div id="container">
+    <div id="rgb">
+      RGB - Red, Green e Blue:
+    </div>
+
+    <div id="rgba">
+      RGBA:
+    </div>
+
+    <div id="hsl">
+      HSL - Hue, Saturation e Lightness
+    </div>
+
+    <div id="hsla">
+      HSLA
+    </div>
+
+  </div>
+</body>
+</html>

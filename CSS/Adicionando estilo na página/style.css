@@ -1,0 +1,27 @@
+p {
+  color: blue;
+  text-align: center;
+}
+
+#paragraf-id{
+  color: green;
+}
+
+.elemento-com-borda{
+  text-align: left;
+  font-size: 18px;
+  border-color: red;
+  border-style: solid;
+}
+
+.cascata{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: gray;
+}
+
+#paragraf-div{
+  background-color: orange;
+}
