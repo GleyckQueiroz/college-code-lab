@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    #div-flexbox-row{
+      background-color: green;
+      display: flex;
+      flex-direction: row;
+      padding: 8px;
+    }
+
+    #div-flexbox-row div{
+      margin-right: 20px;
+    }
+
+    #div-flexbox-col{
+      background-color: green;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    #div-grid-layout{
+      display: grid;
+      grid-template-columns: 
+        100px 100px 100px 100px 100px 100px;
+        color: #000;
+        background-color: rgba(15,150,150,40%);
+        padding: 15px;
+        width: 600px;
+    }
+
+    #div-position-absolute{
+      position: absolute;
+      background-color: rgba(15,100,100,50%);
+      width: 200px;
+      height: 100px;
+      top: 80px;
+      right: 0;
+      border: 3px solid red;
+      color: #000;
+    }
+
+    #div-position-static{
+      background-color: green;
+      width: 100px;
+      padding: 10px;
+    }
+
+    #div-position-relative{
+      position: relative;
+      width: 300px;
+      background-color: blueviolet;
+      border: 3px solid #0f00ff;
+      left: 90px;
+      /*left: 400px;*/
+    }
+
+    #div-position-fixed{
+      position: fixed;
+      width: 300px;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(3,255,200,70%);
+      border: 2px solid rgb(0,0,255);
+    }
+
+  </style>
+</head>
+<body>
+  
+  <h1>Flexbox row</h1>
+
+  <div id="div-flexbox-row">
+    <div>Flexbox1</div>
+
+    <div>Flexbox2</div>
+
+    <div>Flexbox3</div>
+  </div>
+
+  <h1>Flexbox col</h1>
+
+  <div id="div-flexbox-col">
+    <div>Flexbox1</div>
+
+    <div>Flexbox2</div>
+
+    <div>Flexbox3</div>
+  </div>
+
+  <h1>Display GridLayout</h1>
+  <div id="div-grid-layout">
+    <div>grid1</div>
+    <div>grid2</div>
+    <div>grid3</div>
+    <div>grid4</div>
+    <div>grid5</div>
+    <div>grid6</div>
+  </div>
+
+  <h1>Posição Absoluta</h1>
+  <div id="div-position-absolute">
+    Absolute: Posicionado em relação ao elemento anterior ou, na ausencia desse,
+    em relação a tag body.
+  </div>
+
+  <h1>Posição Estática</h1>
+  <div id="div-position-static">
+    Static position
+  </div>
+
+  <h1>Posição Relativa</h1>
+  <div id="div-position-relative">
+    Posição relativa: Relativa a sua posição natural (static)
+  </div>
+
+  <h1>Posição Fixa</h1>
+  <div id="div-position-fixed">
+    Fixed: Posicionado de forma fixa em relação ao viewport
+  </div>
+</body>
+</html>
