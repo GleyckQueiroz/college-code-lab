@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoxModel em CSS</title>
+
+  <style>
+
+    body{
+      background-color: bisque;
+    }
+    #container{
+      background-color: white;
+      width: 500px;
+      padding: 20px;
+      margin: auto;
+      margin: auto;
+    }
+
+    #link:hover{
+      color: red;
+    }
+
+    #container::first-line{
+      color: blue;
+      text-transform: uppercase;
+    }
+
+    #container-texto::first-line{
+      color: blue;
+      text-transform: uppercase;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>PseudoClasses</h1>
+
+    <a href="#" id="link">Link</a>
+
+    <h2>PseudoElementos</h2>
+    <p id="container-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo nulla vel, minima delectus suscipit dignissimos ut amet recusandae iste ratione ipsum. Odit error nostrum veritatis cum consequatur voluptate! Nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste quibusdam iusto vero possimus adipisci numquam temporibus at impedit perferendis aperiam sint dolor necessitatibus, enim laudantium voluptates deserunt. Officiis, assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam obcaecati quidem magnam ut aliquid odio nam vitae voluptatibus quae nemo eius, similique harum maxime saepe nihil dolorem illo cum a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo aspernatur cumque alias ea incidunt, reprehenderit nihil magnam, nobis, vel in sequi exercitationem eaque omnis quidem impedit vero accusantium autem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione dolor magnam accusamus voluptas repellat, sunt soluta fugit, suscipit corrupti officia sit exercitationem dolorem vitae, at impedit cumque cum magni eos.</p>
+    
+    <h2>Box Model</h2>
+
+    <img src="./images/images.jfif" alt="BoxModel" title="BoxModel" width="200px">
+
+    <h3>Grid layout X FlexBox layout</h3>
+
+    <img src="./images/1_2hfCdgDiShzP1OBAyNGKOQ.png" alt="FlexboxXGrid" title="FlexboxXGrid" width="500px">
+  </div>
+</body>
+</html>
