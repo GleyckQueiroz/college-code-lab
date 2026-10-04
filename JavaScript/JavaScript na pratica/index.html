@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>JavaScript na pratica</title>
+</head>
+<body class="container">
+    <form class="form m-2">
+        <label for="v1" class="form-label">Valor A</label>
+        <input type="number" name="valorA" id="v1" class="form-control">
+        
+        <label for="v2" class="form-label">Valor B</label> 
+        <input type="number" name="valorB" id="v2" class="form-control">
+        
+        <label for="operacao" class="form-label">Operação</label>
+        <select name="operação" id="oper" class="form-select">
+            <option value="soma">Soma</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+            <option value="potenciacao">Potenciação</option>
+        </select>
+
+        <button type="button" onclick="executar()" class="btn btn-primary m-2">Executar</button>
+    </form>
+
+    <div class="alert alert-success" id="resp">O resultado aparece aqui</div>
+
+    <script src="scripts.js"></script>
+    <script>
+        const executar = () =>{
+            const valueA = document.getElementById("v1").value;
+            const valueB = document.getElementById("v2").value;
+
+            if (valueA === "" || valueB === ""){
+                document.getElementById("resp").innerHTML = "Porfavor, preencha ambos os valores"
+                return;
+            }
+            
+            const a = Number(valueA);
+            const b = Number(valueB);
+            const operacao = document.getElementById("oper").value;
+            let resultado;
+
+            switch (operacao){
+                case "soma":
+                    resultado = somar(a,b);
+                    break;
+                case "subtracao":
+                    resultado = subtrair(a,b);
+                    break;
+                case "multiplicacao":
+                    resultado = multiplicar(a,b);
+                    break;
+                case "divisao":
+                    resultado = b !== 0 ? dividir(a,b): "Erro (divisão por zero)";
+                    break;
+                case "potenciacao":
+                    resultado = exponencial(a,b);
+                    break;
+                default:
+                    resultado = "Operação invalida";  
+            }
+
+            document.getElementById("resp").innerHTML = "O resultado da operação é " + resultado;
+        }
+    </script>
+</body>
+</html>

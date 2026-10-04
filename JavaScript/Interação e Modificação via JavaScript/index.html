@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interação e Modificação via JavaScript</title>
+</head>
+<body>
+  
+  <div id="container-1">
+    Conteúdo Original do Container
+  </div>
+
+  <button onclick="alterar()" ondblclick="alterarDnv()">Clique Aqui</button>
+
+  <script>
+    const alterar = () => {
+      let d1 = document.getElementById("container-1");
+      d1.innerHTML="Conteúdo Modificado";
+      d1.style.backgroundColor="red";
+    }
+
+    const alterarDnv = () => {
+      let d1 = document.getElementById("container-1");
+      d1.innerHTML="Conteúdo Original do Container";
+      d1.style.backgroundColor="#fff";
+    }
+  </script>
+
+</body>
+</html>
