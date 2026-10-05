@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estruturas Repetitivas</title>
+</head>
+<body>
+  
+  <h2>For i</h2>
+  <p>Interação nas propriedades de um objeto</p>
+  <p id="d1"></p>
+  <p id="d2"></p>
+
+  <script>
+    const person ={
+    fname: "Jason", 
+    lname: "Moe",
+    age: "30"
+    };//JSON 
+
+    let text = "";
+    for(let x in person){
+      text += person[x] + " ";//x é o nome do campo
+    }
+    document.getElementById("d1").innerHTML = text;
+
+    const cars = ["BMW", "Volvo", "Saab", "Ford"];
+    let text2 = "";
+    for (const elements of cars) {
+      text2 += elements + " ";
+    }
+    document.getElementById("d2").innerHTML = text2;
+  </script>
+</body>
+</html>
