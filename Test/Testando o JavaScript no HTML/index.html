@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testando JavaScript</title>
+</head>
+<body>
+  <h1>Contador de Cliques: <span id="cont">0</span> </h1>
+  <button type="button" onclick="adicionar()">Adicionar</button>
+
+  <script>
+    var contador = 0;
+    const adicionar = () => {
+      contador += 1;
+      document.getElementById("cont").innerHTML = contador;
+    }
+  </script>
+  
+</body>
+</html>
