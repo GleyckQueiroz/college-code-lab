@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <title>Grafico com Vetores</title>
+</head>
+<body>
+  <h1>Google Charts</h1>
+
+  <form action="">
+
+    <label for="v1">Valor de X</label>
+    <input type="number" id="v1">
+    
+  </form>
+  
+  <button onclick="executar()">Executar</button>
+
+  <div id="chart_div"></div>
+  <div id="media"></div>
+
+  <script src="scripts.js"></script>
+  <script> 
+    const executar = () =>{
+      const x = eval(document.getElementById("v1").value);
+      addValor(x); 
+      google.charts.load('current', {packages: ['corechart', 'line']});
+      google.charts.setOnLoadCallback(drawBasic);
+      document.getElementById("media").innerHTML = "Media: " + media();
+    }
+  </script>
+</body>
+</html>
